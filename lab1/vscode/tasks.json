@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ компиляция",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "-I",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/build/SmartHome.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Компиляция всех файлов"
+        }
+    ]
+}
